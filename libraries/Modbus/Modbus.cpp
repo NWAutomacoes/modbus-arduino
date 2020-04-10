@@ -328,7 +328,7 @@ void Modbus::writeMultipleRegisters(byte *frame, word startreg, word numoutputs,
         val = (word)frame[6 + i * 2] << 8 | (word)frame[7 + i * 2];
         this->Hreg(startreg + i, val);
         i++;
-    }while (numoutputs--);
+    } while (numoutputs--);
 
     _reply = MB_REPLY_NORMAL;
 }
@@ -390,7 +390,7 @@ void Modbus::readCoils(word startreg, word numregs)
             bitn = 0;
         //increment the register
         startreg++;
-    }while (numregs--);
+    } while (numregs--);
 
     _reply = MB_REPLY_NORMAL;
 }
